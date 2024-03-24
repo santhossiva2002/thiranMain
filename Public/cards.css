@@ -1,0 +1,400 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ecf9ff;
+}
+
+body {
+    color: #272727;
+    font-family: 'Quicksand', serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    /* padding: 1rem; */
+    margin: 0 !important;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+} */
+
+button.btn.card_btn:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    background: red;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .cards_item {
+        width: 45%;
+    }
+
+    .card {
+        left: 10%;
+    }
+}
+
+@media (min-width: 56rem) {
+    .cards_item {
+        width: 33%;
+    }
+
+    .card {
+        left: 0;
+    }
+}
+
+@media (max-width:640px) {
+    .cards_item {
+        width: 50%;
+
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .cards_item {
+        width: 90%;
+
+    }
+
+    .card {
+        left: 5%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 1.5rem;
+    /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    /* flex: 1 0 0; */
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.1s ease-in-out;
+    box-shadow: 20px 20px 40px -14px rebeccapurple;
+
+}
+
+.card_content {
+    padding: 1rem;
+    background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%);
+    height: 100%;
+}
+
+.card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+    text-align: center;
+}
+
+.card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 3.25rem;
+    font-weight: 400;
+}
+
+.made_by {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.userName {
+    font-size: 40px;
+}
+
+.btnFooter {}
+
+
+.eventsDiv {
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+
+
+/* navbar css */
+
+
+
+nav {
+    background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#logo {
+    max-width: 200px;
+    color: rgb(255, 255, 255);
+}
+
+#nav-links {
+    display: flex;
+    gap: 30px;
+    /* Adjusted from 50px */
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: #fcfcfc;
+    font-size: 18px;
+
+
+
+}
+
+#nav-links a:hover {
+    color: #96f6ff;
+
+}
+
+
+#menu {
+    display: none;
+    cursor: pointer;
+    color: #2d1056;
+}
+
+
+#menuDropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 107px;
+    right: 0;
+    min-width: 40%;
+    z-index: 100;
+    /* min-height: 140px; */
+    background: linear-gradient(to left, #E1F4FE 25%, rgba(102, 115, 240, 0)),
+        linear-gradient(to bottom, #6ec4f2 5%, rgba(102, 115, 240, 0));
+    border: 3px solid #3ae5f8;
+}
+
+#menuDropdown a {
+    text-align: center;
+    color: #481099;
+    padding: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.menuDropdown {
+    display: none;
+    /* Hide dropdown by default */
+    position: absolute;
+    top: 8%;
+    right: 0;
+    background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.menuDropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuDropdown ul li {
+    padding: 5px 15px;
+}
+
+
+/* Show dropdown when active class is applied */
+.menuDropdown.active {
+    display: block;
+}
+
+.heading {
+    height: 10%;
+}
+
+@media only screen and (max-width: 770px) {
+    #nav-links {
+        display: block;
+    }
+
+    .landleft {
+        display: none;
+    }
+
+    .landlefti {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+        font-size: 44px;
+        border-radius: 20px;
+    }
+
+    #menu:hover {
+        border-bottom: none;
+    }
+
+    .land {
+        flex-direction: column;
+    }
+
+    .landleft {
+        width: 50%;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .landright {
+        flex: 1;
+    }
+
+    .text1 {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text1 h1 {
+        font-size: 250%;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .abright {
+        margin-left: 0%;
+    }
+
+    .abright img {
+        width: 400px;
+    }
+
+    .landright {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .tmarch {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .ft-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 769px) {
+    #nav-links {
+        gap: 20px;
+        /* Adjusted from 35px */
+    }
+
+    .about img {
+        width: 80%;
+    }
+
+    .landright {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .tmarch {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .text1 {
+        margin: 0;
+    }
+}

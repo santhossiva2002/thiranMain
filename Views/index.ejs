@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/50d2ae4ecf.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="handleUser()">
+  <nav>
+
+    <div id="logo">
+      <div class="boujee-text">
+        <h1>Thiran 2K24</h1>
+      </div>
+    </div>
+    <div id="nav-links">
+      <a href="#">Home</a>
+      <a href="#aboutuspage">About</a>
+      <a href="#eventpage">Events</a>
+      <a href="#Teams">Teams</a>
+      <!-- <a href="#">Schedule</a> -->
+      <a href="#contact">Contact</a>
+      <a href="#" id="dropdown-toggle" hidden><i class="fa-regular fa-user"></i></a>
+      <div class="dropdown" id="dropdown-menu">
+        <!-- Dropdown menu content goes here -->
+        <div class="dropdownDiv">
+          <ul>
+            <li><a href="Userevents">My Events</a></li>
+            <li><a href="#" onclick="handleLogout();return false;">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="menu-icon">
+      <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+    </div>
+    <div id="dropdown">
+      <a href="#landingpage">Home</a>
+      <a href="#aboutuspage">About</a>
+      <a href="#eventpage">Events</a>
+      <a href="#Teams">Teams</a>
+      <!-- <a href="#">Schedule</a> -->
+      <a href="#contact">Contact</a>
+      <a href="Userevents" hidden id="mobMyEvents">MyEvents</a>
+      <a href="#" onclick="handleLogout();return false" hidden id="mobLogout">Logout</a>
+    </div>
+  </nav>
+
+
+  <div class="land" id="landingpage">
+    <div class="landleft">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script><dotlottie-player
+        src="https://lottie.host/65cfb918-fe72-406b-838e-aa385452566b/VpcyW0Zd0w.json" background="transparent"
+        speed="1" style="width: 100%; height: 100%" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+    </div>
+
+    <div class="landright">
+      <div class="tmarch">
+        <div class="th1">
+          <h2 style="font-size: 30px;">
+            APRIL 1<sup>st</sup> & 2<sup>nd</sup> 2024
+          </h2>
+        </div>
+      </div>
+      <div class="text1">
+        <div class="tflex">
+          <img src="Images/Logopsg.png" width="60px">
+          <div class="ttt">
+
+            <p style="font-size: 20px; font-weight: 600;">PSG College of Technology</p>
+            <p style="font-size: 20px; font-weight: 500;">CAA & CSA <span class="da">Presents</span></p>
+
+
+            <p></p>
+          </div>
+        </div>
+        <div class="timg">
+          <img src="Images/ThiranLogo2024.png">
+
+        </div>
+
+
+      </div>
+      <button class="bbt" onclick="handleHomepageRegister()">Register</button>
+    </div>
+  </div>
+  <div class="landlefti">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <dotlottie-player src="https://lottie.host/65cfb918-fe72-406b-838e-aa385452566b/VpcyW0Zd0w.json"
+      background="transparent" speed="1" style="width: 130%; height: 100%" direction="1" playMode="normal" loop
+      autoplay></dotlottie-player>
+  </div>
+  </div>
+
+  <div class="abcent" id="aboutuspage">
+    <div class="about reveal">
+
+      <div class="ableft">
+        <h1 class="th1" style="font-size: 30px;">About Thiran</h1><br>
+        <p>The alliance of the two associations, Computer Applications Association(CAA) and Computational Sciences
+          Association(CSA) of PSG College of Technology presents the 15’th edition of THIRAN, which has active
+          participation from the various departments within the college every year.</p>
+        <br>
+
+        <p>Two associations of PSG Tech, the Computer Applications Association and the Computational Sciences
+          Association come together to bring you the 15'th edition of THIRAN, an intra-collegiate technical event.
+          Thiran isn't simply a bid to find the technical nonpareil of PSG Tech, it also endeavors to be a platform
+          where participants will be tested on their ability to think on their feet and outside the proverbial box. </p>
+        <br> </p>
+        <p>Every year, a heady combination of departmental pride and the pressure to prove oneself leads to an
+          exhilarating clash between the best of PSG Tech. This year, the stakes are higher, the questions more
+          challenging and the competition more intense. So, are you ready?</p>
+
+      </div>
+      <br>
+      <div class="abright">
+        <section class="gallerycontainer">
+          <div class="galleryslider-wrapper">
+            <div class="galleryslider">
+              <img id="slide-1" src="Images/gallery-1.jpeg" alt="sorry1" />
+              <img id="slide-2" src="Images/gallery-2.jpeg" alt="sorry2" />
+              <img id="slide-3" src="Images/gallery-3.jpeg" alt="sorry3" />
+              <img id="slide-4" src="Images/gallery-4.jpeg" alt="sorry4" />
+              <img id="slide-5" src="Images/gallery-5.jpeg" alt="sorry5" />
+            </div>
+            <div class="slider-nav">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+              <a href="#slide-4"></a>
+              <a href="#slide-5"></a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="cent" id="eventpage">
+    <h1 class="th1" style="font-size: 40px;">Events</h1><br><br>
+    <div class="events reveal">
+      <section class="articles">
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/star_of_thiran.png" class="default-display">
+          <h2 class="card__title"> STAR OF THIRAN </h2>
+          <div class="card__date">
+
+            <span class="time"> 03:00 PM </span><br>
+            <span class="date">Tues,2 APRIL</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Real talent shines through regardless of how many others around you. </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_1')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/codesprint.png" class="default-display">
+          <h2 class="card__title"> CODESPRINT </h2>
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Where Minds Meet Machines in a Battle of Logic and Creativity! </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_2')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/crickbid_auction.png" class="default-display">
+          <h2 class="card__title"> CRICKBID AUCTION </h2>
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> PICK YOUR DARING "XI" </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_3')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/cntrl_alt_code.png" class="default-display">
+          <h2 class="card__title"> CTRL + ALT + QODE </h2>
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Buzzing by the bits </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_4')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/fortress_ctf.png" class="default-display">
+          <h2 class="card__title"> FORTRESS CTF </h2>
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Decode, Predict, Prevail </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_5')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/last_stand.png" class="default-display">
+          <h2 class="card__title"> LAST STAND </h2>
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Where Legends Forge Their Final Stand! </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_6')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/nethunt.png" class="default-display">
+          <h2 class="card__title"> NETHUNT </h2>
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> An Unsolved Mystery with the usual suspects!!! </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_7')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/triple_trouble.png" class="default-display">
+          <h2 class="card__title"> TRIPLE TROUBLE </h2>
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Triple up the fun, with trouble on the run </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_8')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+          <img src="Images/witty_mindz.png" class="default-display">
+          <h2 class="card__title"> WITTY MINDZ </h2>
+          <div class="card__date">
+
+            <span class="time"> 04:30 PM </span><br>
+            <span class="date"> Mon,1 Apr </span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Expand Your Mental Horizons </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_9')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+      </section>
+
+    </div>
+
+  </div><br><br>
+  <hr>
+  <br>
+  <section id="Teams">
+    <div class="container-custom">
+      <div class="heading">
+        <h1 class="th1" style="font-size: 40px;"> OFFICE BEARERS </h1><br><br>
+      </div>
+      <div class="circle-container-custom circle-container-custom-1">
+        <div class="circle-custom">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Kavin.png" alt="Secretary">
+              </div>
+              <div class="flip-box-back">
+                <h3>KAVIN S</h3>
+                <p style="font-size: 12px;">SECREATARY  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle-custom">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/" alt="" width="150px">
+              </div>
+              <div class="flip-box-back">
+                <h3> NULL </h3>
+                <p style="font-size: 12px;">Treasurer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-custom">
+      <div class="heading">
+        <br>
+      </div>
+      <div class="circle-container-custom circle-container-custom-2">
+        <div class="circle-custom">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="" alt="">
+              </div>
+              <div class="flip-box-back">
+                <h3>JONATHAN CECIL</h3>
+                <p style="font-size: 12px;">JOINT SECRETARY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle-custom">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Reethika.png" alt="jointtreasurer">
+              </div>
+              <div class="flip-box-back">
+                <h3>REETHIKA</h3>
+                <p style="font-size: 12px;">JOINT TRESURER  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle-custom">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="photos/" alt="">
+              </div>
+              <div class="flip-box-back">
+                <h3><b>VISVABALA</b></h3>
+                <p style="font-size: 12px;">EXECUTIVE COORDINATOR</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="container-custom">
+      <div class="heading">
+        <h1 class="th1" style="font-size: 40px;"> WEB TEAM </h1><br>
+      </div>
+      <br>
+      <div class="circle-container-custom circle-container-custom-3" style="width: 100%;">
+        <div class="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Aprana.png" alt="web-1" style="width: 100%; height: 100%;">
+              </div>
+              <div class="flip-box-back">
+                <h3> APARNA </h3>
+                <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Sivapoopathi.jpeg" alt="web-2">
+              </div>
+              <div class="flip-box-back">
+                <h3> SIVA POOPATHI </h3>
+                 <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Sana.jpeg" alt="web-3">
+              </div>
+              <div class="flip-box-back">
+                <h3> SUDHARSANA </h3>
+                <!-- <p>MCA</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="circle-container-custom circle-container-custom-3" id="circle-container-custom-3">
+        <div class="circle-custom" id="circle-custom" style="width: 250px; height: 250px;">
+          >
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Abu.png" alt="web-4">
+              </div>
+              <div class="flip-box-back">
+                <h3> ABU SUFIYAN </h3>
+                 <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="circle-custom" id="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/lokesh.png" alt="web-5">
+              </div>
+              <div class="flip-box-back">
+                <h3> LOKESH </h3>
+                 <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="circle-custom" id="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Sivaraman.png" alt="web-6">
+              </div>
+              <div class="flip-box-back">
+                <h3> SIVARAMAN </h3>
+                 <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="circle-container-custom circle-container-custom-3">
+        <div class="circle-custom" id="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Mohan.png" alt="web-7">
+              </div>
+              <div class="flip-box-back">
+                <h3> MOHAN </h3>
+                 <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle-custom" id="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Vijay.jpeg" alt="web-8">
+              </div>
+              <div class="flip-box-back">
+                <h3> VIJAYKEERTHY </h3> 
+                 <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle-custom" id="circle-custom" style="width: 250px; height: 250px;">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Images/Rohith.png" alt="web-9">
+              </div>
+              <div class="flip-box-back">
+                <h3> ROHITH </h3>
+                 <!-- <p> MCA </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  <footer id="contact">
+
+    <div class="scf">
+      <h2>
+        Technical Support
+      </h2>
+      <div class="scftext">
+        <p class="footername">Siva Poopathi M</p>
+        <p><i class="fa-solid fa-phone"></i> +91 93457 15818</p><br>
+      </div>
+      <div class="scftext">
+        <p class="footername">Abu Sufiyan</p>
+        <p><i class="fa-solid fa-phone"></i> +91 84287 04114</p><br>
+      </div>
+      <div class="scftext">
+        <p class="footername">Lokesh P</p>
+        <p><i class="fa-solid fa-phone"></i> +91 80728 22922</p><br>
+      </div>
+
+
+    </div>
+    <div class="scf">
+      <h2>
+        Event Support
+      </h2>
+      <div class="scftext">
+        <p class="footername">Jonathan</p>
+        <p><i class="fa-solid fa-phone"></i> +91 73055 40931</p><br>
+      </div>
+      <div class="scftext">
+        <p class="footername">Reethika</p>
+        <p><i class="fa-solid fa-phone"></i> +91 63696 42906</p><br>
+      </div>
+      <div class="scftext">
+        <p class="footername">Vishwa Bala</p>
+        <p><i class="fa-solid fa-phone"></i> +91 94428 05921</p><br>
+      </div>
+
+
+    </div>
+    <div class="scf">
+      <h2>
+        Secretary
+      </h2>
+      <div class="scftext">
+        <p class="footername">Kavin S</p>
+        <p><i class="fa-solid fa-phone"></i> +91 94428 05921</p><br>
+      </div>
+      <h2>
+        Treasurer
+      </h2>
+      <div class="scftext">
+        <p style="margin-bottom: 5px;" class="footername">RadhaKrishnan</p>
+        <p><i class="fa-solid fa-phone"></i> +91 84286 38479</p><br>
+      </div>
+    </div>
+
+
+    <!-- <div class="scc">
+      <p>Follow us on</p><br>
+      <div class="socials">
+        <a href="https://www.instagram.com/thiran_psgtech/?igsh=MzRlODBiNWFlZA%3D%3D" target="_blank" id="sociallinks">
+          <i class="fa-brands fa-instagram fa-2x" style="color: #48eaef;"></i>
+        </a>
+      </div>
+    </div> -->
+
+    </div>
+
+
+  </footer>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
+
+<!-- 
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form> -->
+
+
+
+<script src="index.js"></script>
+</body>
+
+
+
+<!-- 
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form> -->
+<script>
+  const interval = 1750;
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.galleryslider img');
+
+  function showSlides() {
+    slides.forEach((slide) => {
+      slide.style.display = 'none';
+    });
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, interval);
+  }
+
+  showSlides(); 
+</script>
+
+</html>
