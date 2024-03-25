@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="event_description.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Event Description Page</title>
+  <script src="https://kit.fontawesome.com/50d2ae4ecf.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="handleUser(), onLoad('<%= event_name %>')">
+  <nav>
+
+    <div id="logo">
+      <div class="boujee-text">
+        <h1>Thiran 2K24</h1>
+      </div>
+    </div>
+    <div id="nav-links">
+      <a href="/">Home</a>
+      <!-- <a href="#aboutuspage">AboutUs</a>
+      <a href="#eventpage">Events</a>
+      <a href="#">Teams</a>
+      <a href="#">Schedule</a>
+      <a href="#contact">Contact</a> -->
+      <a href="#" id="dropdown-toggle" hidden><i class="fa-regular fa-user"></i></a>
+      <div class="dropdown" id="dropdown-menu">
+        <!-- Dropdown menu content goes here -->
+        <div class="dropdownDiv">
+          <ul>
+            <li><a href="Userevents">My Events</a></li>
+            <li><a href="#" onclick="handleLogout();return false;">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="menu-icon">
+      <img id="menuImg" src="Images/menu.png" width="30px" hidden>
+      <a id="mobHome" href="/">Home</a>
+    </div>
+
+    <div id="dropdown">
+      <a href="/">Home</a>
+      <a href="Userevents">My Events</a>
+      <a href="#" onclick="handleLogout();return false;">Logout</a>
+      <!-- <a href="#">Events</a>
+      <a href="#">Teams</a>
+      <a href="#">Schedule</a>
+      <a href="#">Contact</a> -->
+
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="heading">
+
+    </div>
+    <div class="card card-0">
+      <h1 class="heading__title" id="event_title"></h1>
+    </div>
+    <div class="cards">
+      <div class="card card-1">
+        <h2 class="card__title">EVENT DESCRIPTION</h2>
+        <p class="card__apply">
+        <p class="card__link" id="event_description">
+          <i class="fas fa-arrow-right"></i>
+        </p>
+        </p>
+      </div>
+      <div class="card card-2">
+        <button class="buttonregister" onclick="registerEvent('<%= event_name %>')">REGISTER NOW</button>
+      </div>
+      <div class="card card-3">
+        <h2 class="card__title">GENERAL INFO</h2>
+        <p class="card__apply">
+        <p class="card__link">
+          <br>
+          Team Size: <span id="no_participants"></span><br>
+          Number Of Rounds: <span id="no_rounds"></span><br>
+          Venue: <span id="venue"></span><br><br>
+          Duration: <br>
+          Round 1: <span id="duration_1"></span><br>
+          Round 2: <span id="duration_2"></span>
+          <!-- <i class="fas fa-arrow-right"></i></p> -->
+        </p>
+      </div>
+      <div class="card card-4">
+        <h5 class="card__title">ROUND-WISE DESCRIPTION</h5>
+        <p class="card__apply">
+        <p class="card__link">
+          <u><b>Round 1 :</b> </u><br><span id="round_1"></span><br>
+          <u><b><br>Round 2 :</b></u> <br><span id="round_2"></span>
+          <!-- <i class="fas fa-arrow-right"></i> -->
+        </p>
+        </p>
+      </div>
+      <div class="card card-5">
+        <h2 class="card__title">CO-ORDINATORS' DETAILS</h2>
+        <p class="card__apply">
+        <p class="card__link">
+          Name: <span id="name_1"></span><br>
+          Ph: <span id="phone_1"></span><br>
+          Name: <span id="name_2"></span><br>
+          Ph: <span id="phone_2"></span>
+          <!-- <i class="fas fa-arrow-right"></i> -->
+        </p>
+        </p>
+      </div>
+      <div class="card card-6">
+        <h2 class="card__title">EVENT RULES</h2>
+        <p class="card__apply">
+        <p class="card__link" id="rules">
+          <!-- <i class="fas fa-arrow-right"></i> -->
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+
+    <div class="scf">
+      <h2>
+        Technical Support
+      </h2>
+      <div class="scftext">
+        <p>Siva Poobathi M</p>
+        <p><i class="fa-solid fa-phone"></i> +91 93457 15818</p><br>
+      </div>
+      <div class="scftext">
+        <p>Abu Sufiyan</p>
+        <p><i class="fa-solid fa-phone"></i> +91 84287 04114</p><br>
+      </div>
+      <div class="scftext">
+        <p>Lokesh P</p>
+        <p><i class="fa-solid fa-phone"></i> +91 80728 22922</p><br>
+      </div>
+
+
+    </div>
+    <div class="scf">
+      <h2>
+        Event Support
+      </h2>
+      <div class="scftext">
+        <p>Jonathan</p>
+        <p><i class="fa-solid fa-phone"></i> +91 73055 40931</p><br>
+      </div>
+      <div class="scftext">
+        <p>Reethika</p>
+        <p><i class="fa-solid fa-phone"></i> +91 63696 42906</p><br>
+      </div>
+      <div class="scftext">
+        <p>Vishwa Bala</p>
+        <p><i class="fa-solid fa-phone"></i> +91 94428 05921</p><br>
+      </div>
+
+
+    </div>
+    <div class="scf">
+      <h2>
+        Secretary
+      </h2>
+      <div class="scftext">
+        <p>Kavin S</p>
+        <p><i class="fa-solid fa-phone"></i> +91 94428 05921</p><br>
+      </div>
+      <h2>
+        Treasurer
+      </h2>
+      <div class="scftext">
+        <p>RadhaKrishnan</p>
+        <p><i class="fa-solid fa-phone"></i> +91 84286 38479</p><br>
+      </div>
+    </div>
+
+
+    <!-- <div class="scc">
+      <p>Follow us on</p><br>
+      <div class="socials">
+        <a href="https://www.instagram.com/thiran_psgtech/?igsh=MzRlODBiNWFlZA%3D%3D" target="_blank" id="sociallinks">
+          <i class="fa-brands fa-instagram fa-2x" style="color: #48eaef;"></i>
+        </a>
+      </div>
+    </div> -->
+
+    </div>
+
+
+  </footer>
+
+
+
+  <script src="event_description.js"></script>
+</body>
+
+</html>

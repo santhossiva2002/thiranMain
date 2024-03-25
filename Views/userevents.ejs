@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="cards.css">
+  <script src="https://kit.fontawesome.com/50d2ae4ecf.js" crossorigin="anonymous"></script>
+  <script>
+
+
+    function registerEvent() {
+      fetch('/getUserEvents', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })
+        .then(
+          response => response.json())
+        .then(async data => {
+          console.log(data.data)
+          populateCards(data.data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+
+    }
+
+    function populateCards(cardsData) {
+      const cardList = document.getElementById('cardList');
+      cardList.innerHTML = ''; // Clear any existing cards
+
+      // Iterate through the received data and create card elements
+      cardsData.forEach(card => {
+        const cardItem = document.createElement('li');
+        cardItem.classList.add('cards_item');
+
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+
+        const cardImage = document.createElement('div');
+        cardImage.classList.add('card_image');
+
+
+
+        switch (card.event_name) {
+
+          case "NETHUNT":
+            cardImage.innerHTML = `<img src="Images/nethunt.png">`;
+            break
+          case "LAST STAND [Valorant]":
+            cardImage.innerHTML = `<img src="Images/last_stand.png">`;
+            break
+          case "CODESPRINT":
+            cardImage.innerHTML = `<img src="Images/codesprint.png">`;
+            break
+          case "FORTRESS CTF":
+            cardImage.innerHTML = `<img src="Images/fortress_ctf.png">`;
+            break
+          case "STAR OF THIRAN":
+            cardImage.innerHTML = `<img src="Images/star_of_thiran.png">`;
+            break
+          case "CRICKBID AUCTION":
+            cardImage.innerHTML = `<img src="Images/crickbid_auction.png">`;
+            break
+          case "WITTY MINDZ":
+            cardImage.innerHTML = `<img src="Images/witty_mindz.png">`;
+            break
+          case "CTRL ALT QODE":
+            cardImage.innerHTML = `<img src="Images/cntrl_alt_code.png">`;
+            break
+          case "TRIPLE TROUBLE":
+            cardImage.innerHTML = `<img src="Images/triple_trouble.png">`;
+            break
+          case "LAST STAND - [FALL GUYS]":
+            cardImage.innerHTML = `<img src="Images/last_stand.png">`;
+            break
+
+
+        }
+
+        const cardContent = document.createElement('div');
+        cardContent.classList.add('card_content');
+        cardContent.innerHTML = `
+        <h2 class="card_title">${card.event_name}</h2>
+        <p class="card_text">${card.participants.join('<br>')}</p>
+        <div class="btnFooter">
+        <button class="btn card_btn">Delete Event</button>
+        <div>
+      `;
+
+        const deleteButton = cardContent.querySelector('.card_btn');
+        deleteButton.addEventListener('click', function () {
+          // Call your function to handle delete event here
+          console.log(card._id); // Assuming card.event_id is available
+          fetch('/deleteUserevent', {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ _id: card._id })
+          })
+            .then(response => {
+              if (response.ok) {
+                console.log('Event deleted successfully');
+                location.reload();
+              } else {
+                console.error('Failed to delete event');
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
+
+        });
+
+        // Append elements to construct the card
+        cardElement.appendChild(cardImage);
+        cardElement.appendChild(cardContent);
+        cardItem.appendChild(cardElement);
+        cardList.appendChild(cardItem);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      registerEvent();
+    });
+
+
+
+
+
+
+
+
+
+    async function handleUser() {
+
+      let user = null;
+      await fetch('/getUserEmail')
+        .then(
+          response => response.json())
+        .then(async data => {
+          if (data.data != "No user in session") {
+            user = data.data;
+          }
+        }
+        )
+      console.log("user", user)
+
+    }
+
+    async function handleName() {
+
+      console.log("hello")
+      //getting name
+      let name = null;
+      await fetch('/getUserName')
+        .then(
+          response => response.json())
+        .then(async data => {
+          if (data.data != "No user in session") {
+            name = data.data;
+          }
+        }
+        )
+      console.log("name", name)
+
+      var element = document.getElementById("name")
+      if (name) {
+        element.innerHTML = `Welcome, ${name}!`
+      }
+
+    }
+
+
+    const menuIcon = document.getElementById("menu");
+    const dropdown = document.getElementById("menuDropdown");
+    const img = document.getElementById("img");
+
+
+    menuIcon.addEventListener("click", () => {
+      console.log("clicked")
+      dropdown.style.display = (dropdown.style.display === "flex") ? "none" : "flex";
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+      const isClickInsideDropdown = dropdown.contains(event.target);
+      const isClickOnMenuIcon = menuIcon.contains(event.target);
+
+      if (!isClickInsideDropdown && !isClickOnMenuIcon) {
+        dropdown.style.display = "none";
+      }
+    });
+
+    // Close dropdown when mobile view is maximized
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) { // Adjust the threshold as needed
+        dropdown.style.display = "none";
+      }
+    });
+
+    menuIcon.addEventListener('touchstart', function (event) {
+      // Handle touchstart event
+      alert("hi");
+    });
+
+
+  </script>
+</head>
+
+<body onload="handleUser(); handleName();">
+  <nav>
+
+    <div id="logo">
+      <b>
+        <h1 class="boujee-text">THIRAN 2K24</h1>
+      </b>
+
+    </div>
+    <div id="nav-links">
+      <a href="/">Home</a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <h1 class="userName" id="name"></h1>
+    <h1>Registered Events </h1>
+    <div class="eventsDiv">
+      <ul class="cards" id="cardList">
+        <!-- Cards will be dynamically generated here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
+
+<!-- 
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form> -->
