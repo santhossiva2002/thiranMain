@@ -42,11 +42,14 @@
       </div>
     </div>
     <div id="menu-icon">
-      <img src="Images/menu.png" width="30px">
+      <img id="menuImg" src="Images/menu.png" width="30px" hidden>
+      <a id="mobHome" href="/">Home</a>
     </div>
+
     <div id="dropdown">
       <a href="/">Home</a>
       <a href="Userevents">My Events</a>
+      <a href="#" onclick="handleLogout();return false;">Logout</a>
       <!-- <a href="#">Events</a>
       <a href="#">Teams</a>
       <a href="#">Schedule</a>
@@ -115,7 +118,7 @@
         <p class="card__apply">
         <p class="card__link" id="rules">
           <!-- <i class="fas fa-arrow-right"></i> -->
-        </ul>
+          </ul>
         </p>
       </div>
     </div>

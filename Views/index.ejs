@@ -1,3 +1,4 @@
+<!-- Index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +46,7 @@
       <a href="#Teams">Teams</a>
       <!-- <a href="#">Schedule</a> -->
       <a href="#contact">Contact</a>
-      <a href="Userevents" hidden id="mobMyEvents">MyEvents</a>
+      <a href="Userevents" hidden id="mobMyEvents">My Events</a>
       <a href="#" onclick="handleLogout();return false" hidden id="mobLogout">Logout</a>
     </div>
   </nav>
@@ -145,8 +146,7 @@
   <div class="cent" id="eventpage">
     <h1 class="th1" style="font-size: 40px;">Events</h1><br><br>
     <div class="events reveal">
-      <section class="articles">
-
+      <section class="article1">
         <div class="card">
           <!-- <img src="Images/km.jpg"> -->
           <img src="Images/star_of_thiran.png" class="default-display">
@@ -158,11 +158,15 @@
           </div>
           <div class="popup">
             <p class="title">EVENT DESCPRITION</p>
-            <p style="color: white;"> Real talent shines through regardless of how many others around you. </p>
+            <p style="color: black;"> Real talent shines through regardless of how many others around you. </p>
           </div>
           <button class="register-button" onclick="redirectToEvent('event_1')"><b>REGISTER</b></button>
           <!-- <i class="fa-solid fa-fingerprint"></i> -->
         </div>
+      </section>
+      <section class="articles">
+
+
 
         <div class="card">
           <!-- <img src="Images/km.jpg"> -->
@@ -235,7 +239,10 @@
         <div class="card">
           <!-- <img src="Images/km.jpg"> -->
           <img src="Images/last_stand.png" class="default-display">
-          <h2 class="card__title"> LAST STAND </h2>
+          <div class="card_inner">
+            <h2 class="card__title"> LAST STAND</h2>
+            <p style="text-align: center;">[FALL GUYS]</p>
+          </div>
           <div class="card__date">
 
             <span class="time">TBD</span><br>
@@ -246,6 +253,28 @@
             <p style="color: white;"> Where Legends Forge Their Final Stand! </p>
           </div>
           <button class="register-button" onclick="redirectToEvent('event_6')"><b>REGISTER</b></button>
+          <!-- <i class="fa-solid fa-fingerprint"></i> -->
+        </div>
+
+        <div class="card">
+          <!-- <img src="Images/km.jpg"> -->
+
+          <img src="Images/last_stand.png" class="default-display">
+          <div class="card_inner">
+            <h2 class="card__title"> LAST STAND </h2>
+            <p style="text-align: center;">[VALORANT]</p>
+          </div>
+
+          <div class="card__date">
+
+            <span class="time">TBD</span><br>
+            <span class="date">TBD</span>
+          </div>
+          <div class="popup">
+            <p class="title">EVENT DESCPRITION</p>
+            <p style="color: white;"> Where Legends Forge Their Final Stand! </p>
+          </div>
+          <button class="register-button" onclick="redirectToEvent('event_10')"><b>REGISTER</b></button>
           <!-- <i class="fa-solid fa-fingerprint"></i> -->
         </div>
 
@@ -321,7 +350,7 @@
               </div>
               <div class="flip-box-back">
                 <h3>KAVIN S</h3>
-                <p style="font-size: 12px;">SECREATARY  </p>
+                <p style="font-size: 12px;">SECREATARY </p>
               </div>
             </div>
           </div>
@@ -368,7 +397,7 @@
               </div>
               <div class="flip-box-back">
                 <h3>REETHIKA</h3>
-                <p style="font-size: 12px;">JOINT TRESURER  </p>
+                <p style="font-size: 12px;">JOINT TRESURER </p>
               </div>
             </div>
           </div>
@@ -416,7 +445,7 @@
               </div>
               <div class="flip-box-back">
                 <h3> SIVA POOPATHI </h3>
-                 <!-- <p> MCA </p> -->
+                <!-- <p> MCA </p> -->
               </div>
             </div>
           </div>
@@ -446,7 +475,7 @@
               </div>
               <div class="flip-box-back">
                 <h3> ABU SUFIYAN </h3>
-                 <!-- <p> MCA </p> -->
+                <!-- <p> MCA </p> -->
               </div>
             </div>
           </div>
@@ -460,7 +489,7 @@
               </div>
               <div class="flip-box-back">
                 <h3> LOKESH </h3>
-                 <!-- <p> MCA </p> -->
+                <!-- <p> MCA </p> -->
               </div>
             </div>
           </div>
@@ -474,7 +503,7 @@
               </div>
               <div class="flip-box-back">
                 <h3> SIVARAMAN </h3>
-                 <!-- <p> MCA </p> -->
+                <!-- <p> MCA </p> -->
               </div>
             </div>
           </div>
@@ -489,7 +518,7 @@
               </div>
               <div class="flip-box-back">
                 <h3> MOHAN </h3>
-                 <!-- <p> MCA </p> -->
+                <!-- <p> MCA </p> -->
               </div>
             </div>
           </div>
@@ -501,8 +530,8 @@
                 <img src="Images/Vijay.jpeg" alt="web-8">
               </div>
               <div class="flip-box-back">
-                <h3> VIJAYKEERTHY </h3> 
-                 <!-- <p> MCA </p> -->
+                <h3> VIJAYKEERTHY </h3>
+                <!-- <p> MCA </p> -->
               </div>
             </div>
           </div>
@@ -515,7 +544,7 @@
               </div>
               <div class="flip-box-back">
                 <h3> ROHITH </h3>
-                 <!-- <p> MCA </p> -->
+                <!-- <p> MCA </p> -->
               </div>
             </div>
           </div>

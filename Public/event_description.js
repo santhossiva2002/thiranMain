@@ -25,7 +25,7 @@ function onLoad(event_name) {
     // }
     const duration_2 = events[event_name] ? events[event_name]["general_info"]["duration_2"] : "Not Found";
     document.getElementById("duration_2").innerHTML = duration_2;
-    
+
 
     const round_1 = events[event_name] ? events[event_name]["round_wise_description"]["round_1"] : "Not Found";
     document.getElementById("round_1").innerHTML = round_1;
@@ -211,7 +211,7 @@ function registerEvent(event_name) {
         alert("Event details not found.");
         return;
     }
-    if (events[event_name]["title"] === "STAR OF THIRAN"){
+    if (events[event_name]["title"] === "STAR OF THIRAN") {
         alert("[Automatic Registration] Be the WINNERS of other Events!..")
         return;
     }
@@ -229,7 +229,7 @@ function registerEvent(event_name) {
                     .then(response => response.json())
 
                     .then(async data => {
-                      
+
                         if (data.message === 'Participant already registered') {
                             alert('Participant already registered for the event');
                             return
@@ -240,20 +240,19 @@ function registerEvent(event_name) {
                             if (isConfirmed) {
 
                                 var count = events[event_name]["general_info"]["no_participants"];
-                                if(/-/.test(count))
-                                {
+                                if (/-/.test(count)) {
                                     const min = parseInt(count[0])
                                     const max = parseInt(count[2])
-                                    count =  prompt(`Enter participant count:`);
-                                    if (!count){
+                                    count = prompt(`Enter participant count:`);
+                                    if (!count) {
                                         return;
                                     }
-                                    else if( count > max || count < min){
+                                    else if (count > max || count < min) {
                                         alert("Invalid Team Size")
                                         return;
                                     }
                                 }
-                                else{
+                                else {
                                     count = parseInt(count)
                                 }
                                 const participantEmails = []; // Array to store participant emails
@@ -268,72 +267,72 @@ function registerEvent(event_name) {
                                         userEmail = data.data;
 
                                     }
-                                )
+                                    )
 
                                 // Loop to prompt for participant emails
                                 // Loop to prompt for participant emails
                                 var x
-                             
 
-                                
-                                
+
+
+
                                 for (let i = 1; i <= count - 1; i++) {
                                     const participantEmail = prompt(`Enter participant ${i + 1}'s email:`);
-                                    if (participantEmail === null){
+                                    if (participantEmail === null) {
                                         return;
                                     }
                                     else if (!participantEmail) {
                                         alert("Email address can't be empty.");
                                         i--;
                                     }
-                                    else if(!emailRegex.test(participantEmail)){
+                                    else if (!emailRegex.test(participantEmail)) {
                                         alert("Enter the valid college email id (@psgtech.ac.in).");
                                         i--;
                                     }
-                                    else if(participantEmail === userEmail){
+                                    else if (participantEmail === userEmail) {
                                         alert("Please enter other participants emails.");
                                         i--;
                                     }
-                                    else if(participantEmails.includes(participantEmail)){
+                                    else if (participantEmails.includes(participantEmail)) {
                                         alert("Participants email's should be unique");
                                         i--;
                                     }
                                     // else{
                                     //     participantEmails.push(participantEmail)
                                     // }
-                                    else{
+                                    else {
                                         // await fetch(`/checkParticipantRegistration?event_name=${events[event_name]["title"]}&email=${participantEmail}`
-                                       x = await fetch(`/check_register?event_name=${events[event_name]["title"]}&email=${participantEmail}`)
-                                        .then(response => response.json())
-                                        .then(data => {
-                                            // alert(data.message)
-                                            if (data.message === "Participant not registered") {
-                                                alert("This email is not registered. Do you want to sign up?");
-                                                return 1;
-                                            }
+                                        x = await fetch(`/check_register?event_name=${events[event_name]["title"]}&email=${participantEmail}`)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                // alert(data.message)
+                                                if (data.message === "Participant not registered") {
+                                                    alert("This email is not registered. Do you want to sign up?");
+                                                    return 1;
+                                                }
 
-                                            else if(data.message === "Participant registered") {
-                                                alert("This Participant is already registered with other team for this event");
-                                                i--;
-                                            }
-                                            else{
-                                                participantEmails.push(participantEmail);
-                                            }
+                                                else if (data.message === "Participant registered") {
+                                                    alert("This Participant is already registered with other team for this event");
+                                                    i--;
+                                                }
+                                                else {
+                                                    participantEmails.push(participantEmail);
+                                                }
 
-                                        })
-                                        .catch(
-                                            error => {
-                                                console.error('There was a problem with the fetch operation:', error);
-                                                alert("se try again later.");
-                                            }
-                                        )
+                                            })
+                                            .catch(
+                                                error => {
+                                                    console.error('There was a problem with the fetch operation:', error);
+                                                    alert("se try again later.");
+                                                }
+                                            )
                                     }
                                     if (x == 1)
-                                        break   
+                                        break
                                 }
                                 if (x == 1)
-                                    
-                                window.location.href = '/login'
+
+                                    window.location.href = '/login'
                                 else {
                                     const registrationData = {
                                         event_name: events[event_name]["title"],
@@ -424,7 +423,7 @@ function handleLogout() {
             alert("Error Logging you out")
         }
         else {
-            window.location.href = "/login"
+            window.location.href = "/"
         }
     })
 
@@ -446,14 +445,20 @@ async function handleUser() {
     console.log("user", user)
 
     var element = document.getElementById("dropdown-toggle")
+    var mobElement = document.getElementById("menuImg")
+    var mobHome = document.getElementById("mobHome")
     if (user) {
         element.removeAttribute('hidden')
+        mobElement.removeAttribute('hidden')
+        mobHome.setAttribute("hidden", "")
     }
+
+
 
 }
 
 
-const menuIcon = document.getElementById("menu-icon");
+const menuIcon = document.getElementById("menuImg");
 const dropdown = document.getElementById("dropdown");
 
 menuIcon.addEventListener("click", () => {
@@ -475,7 +480,9 @@ window.addEventListener("resize", () => {
     if (window.innerWidth > 768) { // Adjust the threshold as needed
         dropdown.style.display = "none";
     }
+
 });
+
 
 
 // Define the events object with event details
@@ -638,14 +645,14 @@ const events = {
             "- The participants should not involve in any unacceptable behavior, it will lead to the disqualification of the team."
     },
     event_6: {
-        title: "LAST STAND",
+        title: "LAST STAND - [FALL GUYS]",
         description: 'Gear up for an adrenaline-charged <span style="color:yellow;"><b>gaming extravaganza</b></span> where every move counts and every play shapes destiny. Welcome to Last Stand, where virtual battlefields ignite, and champions rise!',
         general_info: {
-            no_participants: "5",
-            no_rounds: 2,
+            no_participants: "1",
+            no_rounds: 1,
             venue: "TBD",
             duration_1: "3 hours",
-            duration_2: "3 hours"
+            duration_2: "N/A"
         },
         coordinators_details: {
             name_1: "Tejas Srinivas",
@@ -654,24 +661,16 @@ const events = {
             phone_2: "87625 18341"
         },
         round_wise_description: {
-            round_1: "<center><b>Fall Guys Showdown</b></center>"+
-            "Ultimate Knockout is a whimsical and chaotic multiplayer game that pits up to 60 players against each other in a mad dash through obstacle courses and challenges until only one victor remains.<br>",
-            round_2: "<center><b>Valorant Showdown</b></center>"+
-            "Enter the tactical arena of Valorant, where precision and strategy reign supreme. Form your squad, strategize your moves, and engage in heart-pounding firefights against formidable opponents. Only the sharpest minds and quickest reflexes will emerge victorious in this intense competition."
+            round_1: "Ultimate Knockout is a whimsical and chaotic multiplayer game that pits up to 60 players against each other in a mad dash through obstacle courses and challenges until only one victor remains.<br>",
+            
+            round_2: "N/A"
         },
-        event_rules: "<b>Valorant Rules</b><br>"+
-        "- The match will be held in the following stages: Qualifiers - Swift-Play & Semi Finals and Finals  - Unrated<br>"+
-        "- Squad size: 5 members<br>"+
-       "- Squads lacking members and solos should inform beforehand, so that we can group you guys.<br>"+
-       "- The Qualifiers will be held online on a preceding day.<br>"+
-       "- Players must be punctual to their scheduled slots, no waiting time will be given (Slots and timing will be announced in the discord server).<br>"+
-       "- Players must be respectful to one another and no foul language will be tolerated.<br>"+
-       "- If the players are caught using any form of hack or stream sniping your team will be disqualified."+
-       "<br><br><b>Fall Guys Rules</b><br>"+
+        event_rules:
        "- Participants are required to have Fall Guys: Ultimate Knockout downloaded and installed on their gaming platform of choice prior to the event. The game will be conducted online, and players must ensure that they have access to a stable internet connection. Failure to have the game installed and ready to play at the designated start time may result in disqualification from the event.<br>"+
        "- Participants must be present and ready to play at the scheduled match times. Failure to show up within the designated time frame may result in disqualification.<br>"+
        "- Players are expected to exhibit good sportsmanship and fair play throughout the tournament. Any form of cheating or unsportsmanlike behavior will result in immediate disqualification.<br>"
     },
+    
     event_7: {
         title: "NETHUNT",
         description: '<br>A picture can convey things that words alone cannot fully capture or clarify. However, <span style="color:yellow;"><b>images can also be misleading</span></b>. Are you someone who pays close attention to every important detail? If yes, then we have a challenge for you. It"s not a test of your thinking abilities, but rather one that will really make your brain work hard. Are you up for it? Here it is...!!!',
@@ -762,5 +761,37 @@ const events = {
             "- Participants must adhere to the time limit for each round.<br><br>"+
             "- Fair play and sportsmanship are always expected.<br><br>"+
             "- Any form of misconduct will result in immediate disqualification."
+    },
+    event_10: {
+        title: "LAST STAND [Valorant]",
+        description: 'Gear up for an adrenaline-charged <span style="color:yellow;"><b>gaming extravaganza</b></span> where every move counts and every play shapes destiny. Welcome to Last Stand, where virtual battlefields ignite, and champions rise!',
+        general_info: {
+            no_participants: "1-5",
+            no_rounds: 1,
+            venue: "TBD",
+            duration_1: "3 hours",
+            duration_2: "N/A"
+        },
+        coordinators_details: {
+            name_1: "Tejas Srinivas",
+            phone_1: "97900 49089<br>",
+            name_2: "Rakshith UR",
+            phone_2: "87625 18341"
+        },
+        round_wise_description: {
+            round_1: 
+            "Enter the tactical arena of Valorant, where precision and strategy reign supreme. Form your squad, strategize your moves, and engage in heart-pounding firefights against formidable opponents. Only the sharpest minds and quickest reflexes will emerge victorious in this intense competition."
+            ,
+            round_2: "N/A"
+        },
+        event_rules:
+        "- The match will be held in the following stages: Qualifiers - Swift-Play & Semi Finals and Finals  - Unrated<br>"+
+        "- Squad size: 5 members<br>"+
+       "- Squads lacking members and solos should inform beforehand, so that we can group you guys.<br>"+
+       "- The Qualifiers will be held online on a preceding day.<br>"+
+       "- Players must be punctual to their scheduled slots, no waiting time will be given (Slots and timing will be announced in the discord server).<br>"+
+       "- Players must be respectful to one another and no foul language will be tolerated.<br>"+
+       "- If the players are caught using any form of hack or stream sniping your team will be disqualified."
+       
     },
 }

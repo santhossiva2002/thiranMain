@@ -343,14 +343,16 @@ h1 {
     padding-bottom: 4%;
     margin-bottom: 10%;
   }
-  footer{
+
+  footer {
     flex-direction: column;
-    font-size: 10px;
-    padding: 25px
-}
-footer h2{
     font-size: 15px;
-}
+    padding: 25px
+  }
+
+  footer h2 {
+    font-size: 15px;
+  }
 }
 
 
@@ -406,15 +408,15 @@ nav {
   /* min-height: 140px; */
   background: linear-gradient(to left, #E1F4FE 25%, rgba(102, 115, 240, 0)),
     linear-gradient(to bottom, #6ec4f2 5%, rgba(102, 115, 240, 0));
-  border: 3px solid #3ae5f8;
+  /* border: 3px solid #3ae5f8; */
 }
 
 #dropdown a {
   text-align: center;
-  color: #481099;
+  color: white;
+  background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%);
   padding: 20px;
   text-decoration: none;
-  background-color: #fff;
   font-size: 18px;
 }
 
@@ -564,58 +566,65 @@ nav {
 }
 
 .fa-brands.fa-instagram.fa-2x {
-  color: #48eaef; 
+  color: #48eaef;
   transition: color 0.3s ease;
 }
 
 .fa-brands.fa-instagram.fa-2x:hover {
   color: #ff0000;
 }
-footer{
-  
-   background-color: #5200ae;
 
-   display: flex;
-   color: #fff;
-   justify-content:space-evenly;
+footer {
+
+  background-color: #5200ae;
+
+  display: flex;
+  color: #fff;
+  justify-content: space-evenly;
   padding: 5px 50px;
   flex-wrap: wrap;
 
-   
-   
-  
+
+
+
 }
-.scf{
+
+.scf {
   display: flex;
   flex-direction: column;
 
 }
-.socials{
-   display: flex;
-   gap: 30px;
-   
+
+.socials {
+  display: flex;
+  gap: 30px;
+
 }
-.scftext{
-   margin:0px;
-   height: 70px;
+
+.scftext {
+  margin: 0px;
+  height: 70px;
 }
-.scftext p{
+
+.scftext p {
   margin: 0;
 }
-.scs{
-   margin-right: 90px;
+
+.scs {
+  margin-right: 90px;
 }
-footer h2{
-   font-size: 26px;
+
+footer h2 {
+  font-size: 26px;
 }
 
 .fa-brands.fa-instagram.fa-2x {
-   color: #48eaef; 
-   transition: color 0.3s ease;
+  color: #48eaef;
+  transition: color 0.3s ease;
 }
 
 .fa-brands.fa-instagram.fa-2x:hover {
-   color: #ff0000;
+  color: #ff0000;
 }
 
 #logo {
@@ -626,58 +635,65 @@ footer h2{
 .boujee-text {
   font-size: 15px;
 }
+
 .boujee-text {
   --color-one: hsl(15 90% 55%);
   --color-two: hsl(40 95% 55%);
 
-  background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one)
-              ) 0 0 / 100% 100%;
+  background: linear-gradient(90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)) 0 0 / 100% 100%;
 }
+
 .boujee-text {
   --bg-size: 400%;
   --color-one: hsl(15 90% 55%);
   --color-two: hsl(40 95% 55%);
- 
-  background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one)
-              ) 0 0 / var(--bg-size) 100%;
+
+  background: linear-gradient(90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)) 0 0 / var(--bg-size) 100%;
 }
+
 @keyframes move-bg {
   to {
     background-position: var(--bg-size) 0;
   }
 }
+
 .boujee-text {
 
   --color-one: hsl(171, 90%, 55%);
   --color-two: hsl(300, 99%, 63%);
 
-  background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one),
-                #fff
-              ) 0 0 / var(--bg-size) 100%;
+  background: linear-gradient(90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one),
+      #fff) 0 0 / var(--bg-size) 100%;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   animation: move-bg 8s infinite linear;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .boujee-text {
     animation: move-bg 15s linear infinite;
   }
+
   @keyframes move-bg {
     to {
       background-position: var(--bg-size) 0;
     }
   }
+}
+
+
+#mobHome {
+  font-size: x-large;
+  color: white;
+  text-decoration: none;
 }

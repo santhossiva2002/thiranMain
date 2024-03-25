@@ -1,5 +1,6 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /* Design */
 *,
@@ -396,5 +397,67 @@ nav {
 
     .text1 {
         margin: 0;
+    }
+}
+
+/* Text Logo*/
+.boujee-text {
+    font-size: 20px;
+    font-family: 'poppins';
+}
+
+.boujee-text {
+    --color-one: hsl(15 90% 55%);
+    --color-two: hsl(40 95% 55%);
+
+    background: linear-gradient(90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one)) 0 0 / 100% 100%;
+}
+
+.boujee-text {
+    --bg-size: 400%;
+    --color-one: hsl(15 90% 55%);
+    --color-two: hsl(40 95% 55%);
+
+    background: linear-gradient(90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one)) 0 0 / var(--bg-size) 100%;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}
+
+.boujee-text {
+    font-weight: 700;
+    --color-one: hsl(171, 90%, 55%);
+    --color-two: hsl(300, 99%, 63%);
+
+    background: linear-gradient(90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one),
+            #fff) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 8s infinite linear;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .boujee-text {
+        animation: move-bg 15s linear infinite;
+    }
+
+    @keyframes move-bg {
+        to {
+            background-position: var(--bg-size) 0;
+        }
     }
 }

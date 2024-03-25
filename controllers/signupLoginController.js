@@ -97,7 +97,7 @@ exports.generate_otp = async (req, res) => {
                         from: 'thiran.psg@gmail.com', // Sender email address
                         to: email.trim(), // Recipient email address
                         subject: '[OTP] Thiran Registration', // Subject line
-                        text: 'Welcome to the Great Girikalan MAGIC Show, OTP : ' + otp, // Plain text body
+                        text: 'Welcome to THIRAN 2K24, OTP : ' + otp, // Plain text body
                     };
 
 

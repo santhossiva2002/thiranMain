@@ -117,7 +117,7 @@ function handleLogout() {
       alert("Error Logging you out")
     }
     else {
-      window.location.href = "/login"
+      window.location.href = "/"
     }
   })
 
