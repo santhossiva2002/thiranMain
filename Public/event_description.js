@@ -591,7 +591,7 @@ const events = {
     
     },
     event_4: {
-        title: "CTRL+ALT+QODE",
+        title: "CTRL ALT QODE",
         description: '<br>We present you with yet another opportunity to code your brain and buzz your heart out - <b><span style="color:yellow;"><b>Ctrl+Alt+Qode</b></span>. Stack skills and queue tricks up your sleeve for a race against time! This event will surely provide you with a heap of problems that will untangle your mind. Fire up your editor and compile your way through this event to reach the root of this tournament tree.',
         general_info: {
             no_participants: "2",

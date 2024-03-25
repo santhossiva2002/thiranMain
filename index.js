@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const routes = require('./routes/routes');
 const flash = require('connect-flash');
-const path = require('path');
 require('dotenv').config();
+const path = require('path');
 
 
 const { MONGO_URL, PORT } = process.env;
@@ -17,7 +17,7 @@ mongoose
   .then(() => {
     const app = express();
     app.set('view engine', 'ejs');
-     app.set('views', path.join(__dirname, 'Views'));
+    app.set('views', path.join(__dirname, 'Views'));
     app.use(express.static('Public'));
 
     app.use(session({

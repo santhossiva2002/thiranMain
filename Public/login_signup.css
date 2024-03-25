@@ -1,11 +1,4 @@
-/* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
-}
+
 nav {
   position: absolute;
   top: -83px;
@@ -322,4 +315,15 @@ body{
 /* Increase padding-right to accommodate the eye icon */
 .password-toggle input[type="password"] {
     padding-right: 40px; /* Adjust as needed */
+}
+.container .cover .backImg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+.front {
+  /* transform: rotateY(-180deg); */
+  backface-visibility: hidden;
 }

@@ -294,8 +294,8 @@ function showDepartments() {
         // Add departments for Bachelor of Science Programmes
         departmentDiv.style.display = "block";
         var scienceDepartments = [
-            "Appiant Science",
-            "Computer Systems and Devgn"
+            "Applied Science",
+            "Computer Systems and Design"
             // Add other departments here
         ];
         scienceDepartments.forEach(function (department) {
@@ -334,10 +334,6 @@ function showDepartments() {
         departmentDiv.style.display = "block";
         var postgradScienceDepartments = [
             "Applied Mathematics [2 Years]",
-            "Cyber Security Integrated [5 Years integrated]",
-            "Data Science [5 Years Integrated]",
-            "Software Systems [5 Years Integrated]",
-            "Theoretical Computer Science [5 years integrated]",
             "Fashion Design & Merchandising [5 years integrated]"
         ];
         postgradScienceDepartments.forEach(function (department) {

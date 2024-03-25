@@ -7,6 +7,6 @@ const registrationSchema = new mongoose.Schema({
     attended: { type: Boolean, default: false }
   });
 
-const Registration = mongoose.model('Registration', registrationSchema);
+const Registration = mongoose.model('Registration', registrationSchema, 'registrations');
 
 module.exports = Registration;
