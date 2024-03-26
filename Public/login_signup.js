@@ -200,9 +200,26 @@ async function handleSignUp(){
                     const name = document.getElementById("signup-name").value;
                     const phone = document.getElementById("signup-phone").value;
                     const password = document.getElementById("signup-password").value;
-                    const programme = document.getElementById("programme").value;
+                    var programme = document.getElementById("programme").value;
                     const department = document.getElementById("department").value;
                     const year = document.getElementById("year").value;
+                    switch(programme){
+                        case "engineering":
+                            programme = "B.E.";
+                            break;
+
+                        case "science":
+                            programme = "B.Sc.";
+                            break;
+
+                        case "master":
+                            programme = "M.E.";
+                            break;
+
+                        case "postgradscience":
+                            programme = "M.Sc.";
+                            break;
+                    }
                     postData = {
                         name: name,
                         email: email,
