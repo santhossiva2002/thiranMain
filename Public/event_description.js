@@ -538,8 +538,8 @@ const events = {
             no_participants: "1",
             no_rounds: 2,
             venue: "ONLINE EVENT",
-            duration_1: "1 hour (ONLINE)",
-            duration_2: "1 hour 30 minutes (ONLINE)"
+            duration_1: "04:00PM  29-03-2024 (First Round) 1 hrs",
+            duration_2: "04:00PM 30-03-2024 (Second Round) 1.5 hrs",
         },
         coordinators_details: {
             name_1: "Aparna Ramanathan",
