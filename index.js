@@ -41,8 +41,8 @@ mongoose
     app.use(flash());
     app.use('/', routes);
 
-    app.get('/Userevents', function (req, res) {
-      res.render('Userevents'); // Assuming 'events.ejs' is located in the views directory
+    app.get('/userevents', function (req, res) {
+      res.render('userevents'); // Assuming 'events.ejs' is located in the views directory
     });
 
     app.listen(PORT, () => {
