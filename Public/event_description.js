@@ -498,8 +498,8 @@ const events = {
             no_participants: "1",
             no_rounds: 2,
             venue: "D-Block Conference Hall",
-            duration_1: "1 hour",
-            duration_2: "1.5 hours (OFFLINE)"
+            duration_1: "12:15PM - 12:45PM 02-04-2024 ",
+            duration_2: "03:30PM - 04:45PM 02-04-2024 "
         },
         coordinators_details: {
             name_1: "BRINDHA.S.V",
@@ -538,8 +538,8 @@ const events = {
             no_participants: "1",
             no_rounds: 2,
             venue: "ONLINE EVENT",
-            duration_1: "04:00PM  29-03-2024 (First Round) 1 hrs",
-            duration_2: "04:00PM 30-03-2024 (Second Round) 1.5 hrs",
+            duration_1: "04:00PM - 06:30PM 29-03-2024 (First Round)",
+            duration_2: "04:00PM - 06:30PM 30-03-2024 (Second Round)",
         },
         coordinators_details: {
             name_1: "Aparna Ramanathan",
@@ -571,8 +571,8 @@ const events = {
             no_participants: "3",
             no_rounds: 2,
             venue: "TBD",
-            duration_1: "30 minutes (ONLINE)",
-            duration_2: "2.5 hours (OFFLINE)"
+            duration_1: "04:00PM - 04:30PM 30-03-2024 (FIRST ROUND - ONLINE)",
+            duration_2: "05:00PM - 07:30PM 01-04-2024 (SECOND ROUND - OFFLINE)"
         },
         coordinators_details: {
             name_1: "GOUTHAM H",
@@ -601,8 +601,8 @@ const events = {
             no_participants: "3",
             no_rounds: 2,
             venue: "TBD",
-            duration_1: "1.5 hours",
-            duration_2: "2 hours"
+            duration_1: "30-03-2024 1.5 hours",
+            duration_2: "30-03-2024 2 hours"
         },
         coordinators_details: {
             name_1: "NAVEEN KUMAR A A",
@@ -629,7 +629,7 @@ const events = {
             no_participants: "2-4",
             no_rounds: 1,
             venue: "ONLINE EVENT",
-            duration_1: "4-5 hrs (ONLINE)",
+            duration_1: "09:00AM - 06:00PM 31-03-2024 (FIRST ROUND - ONLINE)",
             duration_2: "N/A"
         },
         coordinators_details: {
@@ -655,8 +655,8 @@ const events = {
             no_participants: "1",
             no_rounds: 1,
             venue: "TBD",
-            duration_1: "3 hours",
-            duration_2: "N/A"
+            duration_1: "09:00AM - 05:30PM 31-03-2024 (PRELIMS)",
+            duration_2: "05:30PM - 07:30PM 01-04-2024"
         },
         coordinators_details: {
             name_1: "Tejas Srinivas",
@@ -682,7 +682,7 @@ const events = {
             no_participants: "1",
             no_rounds: 1,
             venue: "ONLINE EVENT",
-            duration_1: "3 days",
+            duration_1: "10:00 AM 30-03-2024 to <br> &emsp;&emsp;&emsp;&emsp; 05:00 PM 01-04-2024 ",
             duration_2: "N/A"
         },
         coordinators_details: {
@@ -714,8 +714,8 @@ const events = {
             no_participants: "2-3",
             no_rounds: 2,
             venue: "TBD",
-            duration_1: "4 - 5 hrs (ONLINE - GMEET)",
-            duration_2: "2 - 2.5 hrs (OFFLINE)"
+            duration_1: "09:00AM - 05:00PM 31-03-2024 (ONLINE - GMEET)",
+            duration_2: "05:30AM - 07:00PM 01-04-2024 (OFFLINE)"
         },
         coordinators_details: {
             name_1: "RASHMI N S",
@@ -728,6 +728,7 @@ const events = {
             round_2: " The second round is the Final round of this competition in which teams engage in interactive challenges. In 'Tic Tac Toe', players combine strategy with agility, performing activities before racing to fill their grid. Before placing their markers, they must overcome hindrances such as bottle flips or completing rounds of a roundabout. This dynamic twist adds an extra layer of challenge and excitement to the game. Following this, in 'Headphone Game!', one player will put on headphones and try to guess the statements conveyed by the other team members amidst noise."
         },
         event_rules: "- Each team must contain a maximum of 3 members<br><br>"+
+            "- There will be break given on the first round<br><br>"+
             "- The top 10 teams in Prelims will be selected for finals<br><br>"+
             "- In case of a tie-breaker, the team that completes the game first wins.<br><br>"+
             "- The leaderboard is used to determine the winner."
@@ -740,9 +741,9 @@ const events = {
         general_info: {
             no_participants: "2",
             no_rounds: 2,
-            venue: "K504",
-            duration_1: "40 MIN (OFFLINE)",
-            duration_2: "1 HOUR (OFFLINE)"
+            venue: "K504 (OFFLINE)",
+            duration_1: "04:30PM - 05:10PM 01-04-2024 ",
+            duration_2: "05:30PM - 06:30PM 01-04-2024 "
         },
         coordinators_details: {
             name_1: "HEMANTH KUMAR V",
@@ -756,6 +757,7 @@ const events = {
             "&nbsp;&nbsp;&nbsp;&nbsp;Solve a crossword puzzle using provided clues."+
             " Engage in a computer science quiz."+
             " Memorize details from an image and answer the subsequent questions accordingly.",
+    
             round_2: "<center><b>Decode Drama</b></center>"+
             '<span style="color:yellow;">This round combines wordplay and acting skills:</span><br>'+
             " &nbsp;&nbsp;&nbsp;&nbsp;Participants crack a jumbled word related to computer science."+
@@ -784,8 +786,7 @@ const events = {
         },
         round_wise_description: {
             round_1: 
-            "Enter the tactical arena of Valorant, where precision and strategy reign supreme. Form your squad, strategize your moves, and engage in heart-pounding firefights against formidable opponents. Only the sharpest minds and quickest reflexes will emerge victorious in this intense competition."
-            ,
+            "Enter the tactical arena of Valorant, where precision and strategy reign supreme. Form your squad, strategize your moves, and engage in heart-pounding firefights against formidable opponents. Only the sharpest minds and quickest reflexes will emerge victorious in this intense competition.",
             round_2: "N/A"
         },
         event_rules:
