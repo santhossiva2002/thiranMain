@@ -100,9 +100,11 @@ function validateSignupForm() {
     }
 
     // Validate email format
-    var emailRegex = /^[0-9]{2}[a-zA-Z]{1,2}[0-9]+@psgtech\.ac\.in$/;
-    if (!emailRegex.test(email)) {
-        emailError.textContent = "Please enter your official PSG college email id";
+    // var emailRegex = /^[0-9]{2}[a-zA-Z]{1,2}[0-9]+@psgtech\.ac\.in$/;
+    var emailRegex = /^[0-9]{2}(?!pw|pc|pd|pt)[a-zA-Z]{1,2}[0-9]+@psgtech\.ac\.in$/;
+
+    if (!emailRegex.test(email.toLowerCase())) {
+        emailError.textContent = "Please enter your correct PSG college email id or department";
         emailError.classList.add("error");
         setTimeout(function() {
             emailError.textContent = "";
@@ -149,7 +151,10 @@ async function handleSignUp(){
         return;
     }
     
-    const email = document.getElementById("signup-email").value;
+    var email = document.getElementById("signup-email").value;
+    email = email.toLowerCase();
+    // alert(email)
+    
 
     // Create an object containing the email data
     var postData = {

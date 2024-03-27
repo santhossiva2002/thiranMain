@@ -217,6 +217,7 @@ function registerEvent(event_name) {
     }
 
     var emailRegex = /^[0-9]{2}[a-zA-Z]{1,2}[0-9]+@psgtech\.ac\.in$/;
+    
 
     // Check user session
     fetch("/session_check")
