@@ -146,6 +146,131 @@ function validateSignupForm() {
 }
 
 
+var modal = document.getElementById("myModal");
+var closeOTP = document.getElementById("optClose");
+var submitOTP = document.getElementById("submitBtn");
+
+closeOTP.onclick = function() {
+    modal.style.display = "none";
+  }
+
+// Display the OTP modal
+function showOTPModal() {
+   modal.style.display = "block";
+}
+
+submitOTP.onclick = async function() {
+    var userOTP  = document.getElementById("otpInput").value;
+    var email = document.getElementById("signup-email").value;
+    email = email.toLowerCase();
+
+    if (userOTP.trim() === "") {
+      alert("Please enter the OTP.");
+      return;
+    }
+
+    postData = {
+        userOTP : userOTP.toString(),
+        email: email
+    };
+
+    // Options for the fetch request
+    options = {
+        method: 'POST', // Specify the method as POST
+        headers: {
+            'Content-Type': 'application/json' // Specify content type as JSON
+        },
+        body: JSON.stringify(postData) // Convert data to JSON string and send in the body
+    };
+
+    
+        await fetch("/validate_otp", options)
+        .then(response => response.json())
+        .then(async data => {
+            if (data.message === "OTP verified successfully") {
+                const name = document.getElementById("signup-name").value;
+                const phone = document.getElementById("signup-phone").value;
+                const password = document.getElementById("signup-password").value;
+                var programme = document.getElementById("programme").value;
+                const department = document.getElementById("department").value;
+                const year = document.getElementById("year").value;
+                switch(programme){
+                    case "engineering":
+                        programme = "B.E.";
+                        break;
+
+                    case "science":
+                        programme = "B.Sc.";
+                        break;
+
+                    case "master":
+                        programme = "M.E.";
+                        break;
+
+                    case "postgradscience":
+                        programme = "M.Sc.";
+                        break;
+                }
+                postData = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    password: password,
+                    programme: programme,
+                    department: department,
+                    year: year,
+                };
+                options = {
+                    method: 'POST', // Specify the method as POST
+                    headers: {
+                        'Content-Type': 'application/json' // Specify content type as JSON
+                    },
+                    body: JSON.stringify(postData) // Convert data to JSON string and send in the body
+                };
+
+                await fetch('/signup', options)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                 
+                    if(data.message === "success"){
+                        alert("Registration Successful")
+                        modal.style.display = "none";
+                        window.location.href = '/login';
+                    }
+                    else{
+                        alert("Registration is not successful, try again later.")
+                        return;
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                    // Handle errors here if needed
+                    return;
+                });
+            }
+            else {
+                alert("Invalid OTP, try to SIGN UP Again");
+                return;
+            }
+            modal.style.display = "none";
+            
+    })
+    .catch(error => {
+    console.error('Error:', error);
+    alert(error)
+    alert('An error occurred while validating OTP. Please try again later.');
+    });
+  };
+
+
+
+
+
 async function handleSignUp(){
     if(!validateSignupForm()){
         return;
@@ -170,106 +295,23 @@ async function handleSignUp(){
         body: JSON.stringify(postData) // Convert data to JSON string and send in the body
     };
 
+    showOTPModal()
+
+    // const userOTP = prompt('Enter the OTP sent to your email:');
     await fetch("/generate_otp", options)
     .then(response => response.json())
     .then(async data => {
         if(data.message === "Already Exists"){
+            modal.style.display = "none";
             alert("The email is already registered")
             window.location.href = '/login'
         }
         else if(data.message === "OTP send"){
-        
-        // alert("OTP has been send to your Mail"); // Alert user that OTP has been sent
-        const userOTP = prompt('Enter the OTP sent to your email:');
-
-            postData = {
-                userOTP : userOTP.toString(),
-                email: email
-            };
-        
-            // Options for the fetch request
-            options = {
-                method: 'POST', // Specify the method as POST
-                headers: {
-                    'Content-Type': 'application/json' // Specify content type as JSON
-                },
-                body: JSON.stringify(postData) // Convert data to JSON string and send in the body
-            };
-
             
-            await fetch("/validate_otp", options)
-            .then(response => response.json())
-            .then(async data => {
-                alert(data.message)
-                if (data.message === "OTP verified successfully") {
-                    const name = document.getElementById("signup-name").value;
-                    const phone = document.getElementById("signup-phone").value;
-                    const password = document.getElementById("signup-password").value;
-                    var programme = document.getElementById("programme").value;
-                    const department = document.getElementById("department").value;
-                    const year = document.getElementById("year").value;
-                    switch(programme){
-                        case "engineering":
-                            programme = "B.E.";
-                            break;
-
-                        case "science":
-                            programme = "B.Sc.";
-                            break;
-
-                        case "master":
-                            programme = "M.E.";
-                            break;
-
-                        case "postgradscience":
-                            programme = "M.Sc.";
-                            break;
-                    }
-                    postData = {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        password: password,
-                        programme: programme,
-                        department: department,
-                        year: year,
-                    };
-                    options = {
-                        method: 'POST', // Specify the method as POST
-                        headers: {
-                            'Content-Type': 'application/json' // Specify content type as JSON
-                        },
-                        body: JSON.stringify(postData) // Convert data to JSON string and send in the body
-                    };
-
-                    await fetch('/signup', options)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        if(data.message === "success")
-                            window.location.href = '/login';
-                        else
-                            alert("Registration is not successful, try again later.")
-                    })
-                    .catch(error => {
-                        console.error('There was a problem with the fetch operation:', error);
-                        // Handle errors here if needed
-                    });
-                }
-                else {
-                    alert("Invalid OTP, try to SIGN UP Again");
-                }
-                
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred while validating OTP. Please try again later.');
-    });
-}
+        }
+        else{
+            alert("Something went Wrong in Sending OTP")
+        }
 
     })
 }
