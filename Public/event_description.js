@@ -571,9 +571,9 @@ const events = {
         general_info: {
             no_participants: "3",
             no_rounds: 2,
-            venue: "TBD",
-            duration_1: "04:00PM - 04:30PM 30-03-2024 (FIRST ROUND - ONLINE)",
-            duration_2: "05:00PM - 07:30PM 01-04-2024 (SECOND ROUND - OFFLINE)"
+            venue: "ROUND - 1: ONLINE <br> ROUND-2 :  ",
+            duration_1: "04:00PM - 04:30PM on 30-03-2024",
+            duration_2: "05:00PM - 07:30PM on 01-04-2024"
         },
         coordinators_details: {
             name_1: "GOUTHAM H",
@@ -601,9 +601,9 @@ const events = {
         general_info: {
             no_participants: "3",
             no_rounds: 2,
-            venue: "TBD",
-            duration_1: "30-03-2024 1.5 hours",
-            duration_2: "30-03-2024 2 hours"
+            venue: "<br>ROUND - 1: ONLINE <br> ROUND - 2: M-BLOCK SIL LAB",
+            duration_1: "  10:00AM - 11:30AM on 30-03-2024 ",
+            duration_2: " 04:30PM - 06:00PM on 01-04-2024 "
         },
         coordinators_details: {
             name_1: "NAVEEN KUMAR A A",
@@ -630,7 +630,7 @@ const events = {
             no_participants: "2-4",
             no_rounds: 1,
             venue: "ONLINE EVENT",
-            duration_1: "09:00AM - 06:00PM 31-03-2024 (FIRST ROUND - ONLINE)",
+            duration_1: "09:00AM - 06:00PM on 31-03-2024",
             duration_2: "N/A"
         },
         coordinators_details: {
@@ -656,8 +656,8 @@ const events = {
             no_participants: "1",
             no_rounds: 1,
             venue: "TBD",
-            duration_1: "09:00AM - 05:30PM 31-03-2024 (PRELIMS)",
-            duration_2: "05:30PM - 07:30PM 01-04-2024"
+            duration_1: "09:00AM - 05:30PM on 31-03-2024 (PRELIMS)",
+            duration_2: "05:30PM - 07:30PM on 01-04-2024"
         },
         coordinators_details: {
             name_1: "Tejas Srinivas",
@@ -683,7 +683,7 @@ const events = {
             no_participants: "1",
             no_rounds: 1,
             venue: "ONLINE EVENT",
-            duration_1: "10:00 AM 30-03-2024 to <br> &emsp;&emsp;&emsp;&emsp; 05:00 PM 01-04-2024 ",
+            duration_1: "10:00AM on 30-03-2024 TO <br> &emsp;&emsp;&emsp;&emsp; 05:00PM 01-04-2024 ",
             duration_2: "N/A"
         },
         coordinators_details: {
@@ -715,8 +715,8 @@ const events = {
             no_participants: "2-3",
             no_rounds: 2,
             venue: "TBD",
-            duration_1: "09:00AM - 05:00PM 31-03-2024 (ONLINE - GMEET)",
-            duration_2: "05:30AM - 07:00PM 01-04-2024 (OFFLINE)"
+            duration_1: "09:00AM - 05:00PM on 31-03-2024 (ONLINE - GMEET)",
+            duration_2: "05:30AM - 07:00PM on 01-04-2024 (OFFLINE)"
         },
         coordinators_details: {
             name_1: "RASHMI N S",
@@ -743,8 +743,8 @@ const events = {
             no_participants: "2",
             no_rounds: 2,
             venue: "K504 (OFFLINE)",
-            duration_1: "04:30PM - 05:10PM 01-04-2024 ",
-            duration_2: "05:30PM - 06:30PM 01-04-2024 "
+            duration_1: "04:30PM - 05:10PM on 01-04-2024 ",
+            duration_2: "05:30PM - 06:30PM on 01-04-2024 "
         },
         coordinators_details: {
             name_1: "HEMANTH KUMAR V",
