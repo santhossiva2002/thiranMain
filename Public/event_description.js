@@ -497,7 +497,7 @@ const events = {
         general_info: {
             no_participants: "1",
             no_rounds: 2,
-            venue: "D-Block Conference Hall",
+            venue: "<br>  ROUND - 1 : K504 <br> ROUND - 2 : F-BLOCK ASSEMBLY HALL",
             duration_1: "12:15PM - 12:45PM 02-04-2024 ",
             duration_2: "03:30PM - 04:45PM 02-04-2024 "
         },
@@ -538,8 +538,8 @@ const events = {
             no_participants: "1",
             no_rounds: 2,
             venue: "ONLINE EVENT",
-            duration_1: "04:00PM - 06:30PM 29-03-2024 (First Round)",
-            duration_2: "04:00PM - 06:30PM 30-03-2024 (Second Round)",
+            duration_1: "04:00PM - 06:30PM [29-03-2024]",
+            duration_2: "04:00PM - 06:30PM [30-03-2024]",
         },
         coordinators_details: {
             name_1: "Aparna Ramanathan",
@@ -550,7 +550,7 @@ const events = {
         round_wise_description: {
             round_1: "<center><b>MCQs</b></center><br>"+
         
-            "This round will have 25 – 30 MCQ questions mainly based on topics like data structures and algorithms."+
+            "This round will have 25 MCQ questions mainly based on topics like data structures and algorithms."+
             " The questions will also test the basic coding ability and programming language knowledge of the participant.",
             
             round_2: "<center><b>Decode Drama</b></center><br>"+
