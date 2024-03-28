@@ -568,7 +568,8 @@ const events = {
             " All participants must follow the proctoring guidelines and their activities will be monitored."+
             " Malpractice will be strictly condemned."
         },
-        event_rules: "<br>- Each team consists of 2 members.<br><br>"+
+        event_rules:
+            //  "<br>- Each team consists of 2 members.<br><br>"+
             "- Participants must adhere to the time limit for each round.<br><br>"+
             "- Fair play and sportsmanship are always expected.<br><br>"+
             "- Any form of misconduct will result in immediate disqualification."
@@ -577,7 +578,7 @@ const events = {
         title: "CRICKBID AUCTION",
         description: "The CrickBid Auction features two rounds: first, a quiz competition to shortlist ten teams, and in the second round the selected 10 teams have to participate in the auction and bid for the players they want within a 70 crores purse, adhering to the constraints of 4 batsmen, 1 wicketkeeper, 3 all-rounders, and 3 bowlers, each player will be having varying points. The team with the highest cumulative points while meeting the player requirements emerges victorious.",
         general_info: {
-            no_participants: "3",
+            no_participants: "2-3",
             no_rounds: 2,
             venue: "<br>ROUND - 1: ONLINE <br> ROUND-2 : J411 ",
             duration_1: "04:00PM - 04:30PM on 30-03-2024",
@@ -607,7 +608,7 @@ const events = {
         title: "CTRL ALT QODE",
         description: '<br>We present you with yet another opportunity to code your brain and buzz your heart out - <b><span style="color:yellow;"><b>Ctrl+Alt+Qode</b></span>. Stack skills and queue tricks up your sleeve for a race against time! This event will surely provide you with a heap of problems that will untangle your mind. Fire up your editor and compile your way through this event to reach the root of this tournament tree.',
         general_info: {
-            no_participants: "3",
+            no_participants: "1-3",
             no_rounds: 2,
             venue: "<br>ROUND - 1: ONLINE <br> ROUND - 2: M-BLOCK SIL LAB",
             duration_1: "  10:00AM - 11:30AM on 30-03-2024 ",
@@ -627,7 +628,7 @@ const events = {
             "- The top 5 teams in Prelims will be selected for finals. In case of a tie-breaker, the team that solves the problem first wins<br>"+
             "- The participants should not involve in any unacceptable behaviour, it will lead to the disqualification of the team<br>"+
             "- The leaderboard is used to determine the winner<br>"+
-            "- The participants should not involve in any unacceptable behavior, it will lead to the disqualification of the team.<br>"+
+            // "- The participants should not involve in any unacceptable behavior, it will lead to the disqualification of the team.<br>"+
             "- Question paper, pen, rough sheets for workout will be provided.<br>"+
             "- Smartphone usage is not allowed during the events.<br>"
     },
