@@ -51,7 +51,7 @@ function validateLoginForm() {
     var passwordError = document.getElementById("login-password-error");
 
     // Validate email format
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var emailRegex = /^[0-9]{2}(?!pw|pc|pd|pt)[a-zA-Z]{1,2}[0-9]+@psgtech\.ac\.in$/;
     if (!emailRegex.test(email)) {
         emailError.textContent = "Please enter a valid email address";
         emailError.classList.add("error");

@@ -507,8 +507,8 @@ const events = {
             no_participants: "1",
             no_rounds: 2,
             venue: "<br>  ROUND - 1 : K504 <br> ROUND - 2 : F-BLOCK ASSEMBLY HALL",
-            duration_1: "12:15PM - 12:45PM 02-04-2024 ",
-            duration_2: "03:30PM - 04:45PM 02-04-2024 "
+            duration_1: "12:15PM - 12:45PM on 02-04-2024 ",
+            duration_2: "03:30PM - 04:45PM on 02-04-2024 "
         },
         coordinators_details: {
             name_1: "BRINDHA.S.V",
@@ -526,8 +526,8 @@ const events = {
             "Each participant will be allotted a 15-minute timeframe for their performance."
             
         },
-        event_rules: "- Only the victors and runners-up from all other events at Thiran 2024 are qualified to participate.<br><br>"+
-                    "- If the person doesn’t report for prelims on time, then he/she will not be permitted to participate.<br><br>"+
+        event_rules: "- Only the winners and runners-up from all other events of Thiran 2024 are qualified to participate.<br><br>"+
+                    "- If the person is not reporting on time for prelims, then he/she will not be permitted to participate.<br><br>"+
                     "- Copying of answers from the internet or any other resources is prohibited.<br><br>"+
                     "- The decisions of judges will be final."
 
@@ -620,8 +620,8 @@ const events = {
             phone_2: "93854 68962"
         },
         round_wise_description: {
-            round_1: "The first round is the preliminary round that contains a variety of questions that tests the participants on their knowledge of problem-solving and programming skills. The round contains coding questions that tease your brain, which upon solving hints the solution to a bigger pot. The participants that rank higher in this round advance to the next round.",
-            round_2: "The second round is the Final round of this competition, which presents the participants with a set of programming problems with various milestones to compose an interesting competition. The leaderboard is used to monitor the submissions of the participants. The team that solves the most problems will be announced as the winner. If there is a draw then, the team that finished first wins."
+            round_1: "The first round is the preliminary round that contains a variety of coding and quiz questions that tests the participants on their knowledge of problem-solving and quizzing skills. Top 5 teams in this round advance to the next round.",
+            round_2: "The second round is the final round of this competition. The participants encounter a unique challenge where they must first conquer a coding question. Only upon completion of the coding question, the participants will be able to press the buzzer to get a chance at answering the quiz question, which would be on display for all the teams. Once the buzzer is pressed all participants should stop coding and marks for the coding questions will be allotted accordingly. <br><br> If the participant who buzzes first answers the quiz question incorrectly, the other teams would be given a chance to pounce on the quiz question and scores will be allocated accordingly. The leaderboard is used to monitor the submissions of the participants."
         },
         event_rules: "- Team must contain a maximum of 2 members<br>"+
             "- The top 5 teams in Prelims will be selected for finals. In case of a tie-breaker, the team that solves the problem first wins<br>"+
