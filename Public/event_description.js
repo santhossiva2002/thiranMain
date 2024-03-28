@@ -20,9 +20,7 @@ function onLoad(event_name) {
     const duration_1 = events[event_name] ? events[event_name]["general_info"]["duration_1"] : "Not Found";
     document.getElementById("duration_1").innerHTML = duration_1;
 
-    // if(!events[event_name]["title"] != "NETHUNT"){
-    //     document.getElementById("r1").style.display = "none";
-    // }
+    
     const duration_2 = events[event_name] ? events[event_name]["general_info"]["duration_2"] : "Not Found";
     document.getElementById("duration_2").innerHTML = duration_2;
 
@@ -32,6 +30,7 @@ function onLoad(event_name) {
 
     const round_2 = events[event_name] ? events[event_name]["round_wise_description"]["round_2"] : "Not Found";
     document.getElementById("round_2").innerHTML = round_2;
+
 
     const name_1 = events[event_name] ? events[event_name]["coordinators_details"]["name_1"] : "Not Found";
     document.getElementById("name_1").innerHTML = name_1;
@@ -47,6 +46,15 @@ function onLoad(event_name) {
 
     var rules = events[event_name] ? events[event_name]["event_rules"] : "Not found";
     document.getElementById("rules").innerHTML = rules
+
+    if(events[event_name]["title"] === "NETHUNT" || events[event_name]["title"] === "LAST STAND [Valorant]"){
+        document.getElementById("r2").style.display = "none";
+        document.getElementById("s2").style.display = "none";
+    }
+    else{
+        document.getElementById("r_2").style.display = "block";
+        document.getElementById("s_2").style.display = "block";
+    }
 
 }
 // function registerEvent(event_name) {
@@ -539,8 +547,8 @@ const events = {
             no_participants: "1",
             no_rounds: 2,
             venue: "ONLINE EVENT",
-            duration_1: "04:00PM - 06:30PM [29-03-2024]",
-            duration_2: "04:00PM - 06:30PM [30-03-2024]",
+            duration_1: "04:00PM - 06:30PM on 29-03-2024",
+            duration_2: "04:00PM - 06:30PM on 30-03-2024",
         },
         coordinators_details: {
             name_1: "Aparna Ramanathan",
@@ -555,8 +563,8 @@ const events = {
             " The questions will also test the basic coding ability and programming language knowledge of the participant.",
             
             round_2: "<center><b>Decode Drama</b></center><br>"+
-            "Both the rounds will be hosted online at a convenient time for all PSG students to attend. (after college hours)"+
-            " Therefore, everyone must report (virtually) to the event on time. (Platforms will be specified later)."+
+            "Both the rounds will be hosted online for all PSG students to attend."+
+            " Everyone must report virutally to the event on time in the 'Quizz.com'. "+
             " All participants must follow the proctoring guidelines and their activities will be monitored."+
             " Malpractice will be strictly condemned."
         },
@@ -567,11 +575,11 @@ const events = {
     },
     event_3: {
         title: "CRICKBID AUCTION",
-        description: "The CrickBid Auction features two rounds: first, a quiz competition to shortlist ten teams, and in the second round the selected 10 teams have to auctioned for 11 players within a 70 crore purse, adhering to the constraints of 4 batsmen, 1 wicketkeeper, 3 all-rounders, and 3 bowlers, each player with varying points. The team with the highest cumulative points while meeting the player requirements emerges victorious.",
+        description: "The CrickBid Auction features two rounds: first, a quiz competition to shortlist ten teams, and in the second round the selected 10 teams have to participate in the auction and bid for the players they want within a 70 crores purse, adhering to the constraints of 4 batsmen, 1 wicketkeeper, 3 all-rounders, and 3 bowlers, each player will be having varying points. The team with the highest cumulative points while meeting the player requirements emerges victorious.",
         general_info: {
             no_participants: "3",
             no_rounds: 2,
-            venue: "ROUND - 1: ONLINE <br> ROUND-2 :  ",
+            venue: "<br>ROUND - 1: ONLINE <br> ROUND-2 : J411 ",
             duration_1: "04:00PM - 04:30PM on 30-03-2024",
             duration_2: "05:00PM - 07:30PM on 01-04-2024"
         },
@@ -587,8 +595,8 @@ const events = {
         },
         event_rules: "- Each team must contain of 3 members.<br><br>"+
         "- Where the Ten Team will be shortlisted based on the MCQ in the first round.<br><br>"+
-        "- Each team must have: 4 Batsmen, 1 Wicket Keeper, 3 All-rounders & 3 Bowlers<br><br>"+
-        "- Maximum of 4 overseas players allowed in the team.<br><br>"+
+        "- Each team must build an IPL team which consists of 4 Batsmen, 1 Wicket Keeper, 3 All-rounders & 3 Bowlers through the auction.<br><br>"+
+        "- Maximum of 4 international players allowed in the team.<br><br>"+
         "- Each team will have a purse of 70 crores to spend in the auction.<br><br>"+
         "- Each player appearing in the auction will have their own points.<br><br>"+
         "- The team which has the highest total points will be declared as the winner.<br><br>"+
@@ -668,7 +676,7 @@ const events = {
         round_wise_description: {
             round_1: "Ultimate Knockout is a whimsical and chaotic multiplayer game that pits up to 60 players against each other in a mad dash through obstacle courses and challenges until only one victor remains.<br>",
             
-            round_2: "N/A"
+            round_2: "Final Round"
         },
         event_rules:
        "- Participants are required to have Fall Guys: Ultimate Knockout downloaded and installed on their gaming platform of choice prior to the event. The game will be conducted online, and players must ensure that they have access to a stable internet connection. Failure to have the game installed and ready to play at the designated start time may result in disqualification from the event.<br>"+
@@ -678,13 +686,13 @@ const events = {
     
     event_7: {
         title: "NETHUNT",
-        description: '<br>A picture can convey things that words alone cannot fully capture or clarify. However, <span style="color:yellow;"><b>images can also be misleading</span></b>. Are you someone who pays close attention to every important detail? If yes, then we have a challenge for you. It"s not a test of your thinking abilities, but rather one that will really make your brain work hard. Are you up for it? Here it is...!!!',
+        description: '<br>An Image can convey things that words alone cannot fully capture or clarify. However, <span style="color:yellow;"><b>Images can also be misleading</span></b>. Are you someone who pays close attention to every important detail? If yes, then we have a challenge for you. It"s not a test of your thinking abilities, but rather one that will really make your brain work hard. Are you up for it? Here it is...!!!',
         general_info: {
             no_participants: "1",
             no_rounds: 1,
             venue: "ONLINE EVENT",
-            duration_1: "10:00AM on 30-03-2024 TO <br> &emsp;&emsp;&emsp;&emsp; 05:00PM 01-04-2024 ",
-            duration_2: "N/A"
+            duration_1: "<br> 10:00AM on 30-03-2024 TO 05:00PM of 01-04-2024 ",
+            duration_2: ""
         },
         coordinators_details: {
             name_1: "Prevarshini R J",
@@ -693,20 +701,15 @@ const events = {
             phone_2: "78069 74480"
         },
         round_wise_description: {
-            round_1: "There is only one round",
-            round_2: "N/A"
+            round_1: "Guess the computer related technical term from the image displayed. Clues will be provided for every image after a few tries/hits. Answers are to be entered in Textbox Provided. For every image, First clue appears after 75 tries, Second clue appears after 150 tries.<br><br> Scores will be reduced according to your hit counts. The answers should or will not contain any special characters like (, + * / < > - $ &). Ignore the space between the words in the answer, e.g: “Net-Hunt” must be entered as “nethunt”, 1 must be entered as “one”.",
+            round_2: ""
         },
-        event_rules: "- Guess the computer related technical term from the image displayed.<br."+
-            "- Clues will be provided for every image after a few tries/hits.<br>"+
-            "- Answers are to be entered in Textbox Provided.<br>"+
-            "- For every image, First clue appears after 75 hits, Second clue appears after 150 hits.<br>"+
-            "- Scores will be reduced according to your hit counts.<br>"+
-            "- The answers should or will not contain any special characters like (, + * / < > - $ &).<br>"+
-            "- Ignore the space between the words in the answer, e.g: “Net-Hunt” must be entered as “nethunt”, 1 must be entered as “one”.<br>"+
+        event_rules: "- This is an online event.<br>"+
             "- In case of a tie, the winner will be selected based on the number of tries.<br>"+
             "- Any form of malpractice will lead to disqualification and the organizers have all the rights to disqualify anyone without any prior notice.<br>"+
             "- Selection will be made after verification of the student's credentials. Students with invalid credentials will be disqualified.<br>"+
-            "- Winners will be announced after verification on THIRAN 2024."
+            "- Winners will be announced on 1<sup>st</sup> April 2024.<br>"+
+            "- Judges decision will be final."
     },
     event_8: {
         title: "TRIPLE TROUBLE",
@@ -777,7 +780,7 @@ const events = {
             no_rounds: 1,
             venue: "TBD",
             duration_1: "3 hours",
-            duration_2: "N/A"
+            duration_2: ""
         },
         coordinators_details: {
             name_1: "Tejas Srinivas",
@@ -788,7 +791,7 @@ const events = {
         round_wise_description: {
             round_1: 
             "Enter the tactical arena of Valorant, where precision and strategy reign supreme. Form your squad, strategize your moves, and engage in heart-pounding firefights against formidable opponents. Only the sharpest minds and quickest reflexes will emerge victorious in this intense competition.",
-            round_2: "N/A"
+            round_2: ""
         },
         event_rules:
         "- The match will be held in the following stages: Qualifiers - Swift-Play & Semi Finals and Finals  - Unrated<br>"+
