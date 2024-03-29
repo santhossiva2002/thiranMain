@@ -54,7 +54,7 @@ router.post('/signup', async (req, res) => {
     }
 }
 catch(error){
-    res.status(500).json({message: "OTP not exists"});
+    res.status(500).json({message: "David Billa"});
 }
 });
 
