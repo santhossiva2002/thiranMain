@@ -242,6 +242,11 @@ submitOTP.onclick = async function() {
                         modal.style.display = "none";
                         window.location.href = '/login';
                     }
+                    else if(data.message === "already"){
+                        alert("Registered already")
+                        modal.style.display = "none";
+                        window.location.href = '/login';
+                    }
                     else{
                         alert("Registration is not successful, try again later.")
                         return;
@@ -303,8 +308,11 @@ async function handleSignUp(){
     .then(async data => {
         if(data.message === "Already Exists"){
             modal.style.display = "none";
-            alert("The email is already registered")
-            window.location.href = '/login'
+            setTimeout(() => {
+                alert("The email is already registered");
+                window.location.href = '/login';
+            }, 100); 
+            
         }
         else if(data.message === "OTP send"){
             

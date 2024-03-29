@@ -23,7 +23,7 @@ router.post('/signup', async (req, res) => {
 
         const student = await Student.findOne({ email })
         if(student){
-            res.status(200).json({ message: "success" })
+            res.status(200).json({ message: "already" })
         }
         else{
 
