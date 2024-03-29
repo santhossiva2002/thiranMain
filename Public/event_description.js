@@ -639,7 +639,7 @@ const events = {
             no_participants: "2-4",
             no_rounds: 1,
             venue: "ONLINE EVENT",
-            duration_1: "09:00AM - 06:00PM on 31-03-2024",
+            duration_1: "09:00AM - 06:00PM on 30-03-2024",
             duration_2: "N/A"
         },
         coordinators_details: {
