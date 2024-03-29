@@ -623,7 +623,7 @@ const events = {
             no_rounds: 2,
             venue: "<br>ROUND - 1: ONLINE <br> ROUND - 2: M-BLOCK SIL LAB",
             duration_1: "  10:00AM - 11:30AM on 30-03-2024 ",
-            duration_2: " 04:30PM - 06:00PM on 01-04-2024 "
+            duration_2: " 05:30PM - 07:00PM on 01-04-2024 "
         },
         coordinators_details: {
             name_1: "NAVEEN KUMAR A A",
