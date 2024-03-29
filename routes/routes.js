@@ -16,7 +16,8 @@ router.get('/login', signup_loginController.renderLogin);
 router.post('/login', signup_loginController.login);
 
 router.post('/signup', async (req, res) => {
-    console.log(req.body.name)
+    const {name, email, phone, password, programme, department, year} = req.body;
+    // console.log(req.body.userOTP)
 
     await Student.findOne({ email })
     .then(student => {

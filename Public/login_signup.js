@@ -212,6 +212,7 @@ submitOTP.onclick = async function() {
                         break;
                 }
                 postData = {
+                    // userOTP : userOTP.toString(),
                     name: name,
                     email: email,
                     phone: phone,
