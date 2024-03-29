@@ -16,29 +16,34 @@ router.get('/login', signup_loginController.renderLogin);
 router.post('/login', signup_loginController.login);
 
 router.post('/signup', async (req, res) => {
-    try {
-        
-        // Extract data from the parsed JSON
-        const { name, email, phone, password, programme, department, year } = req.body;
+    console.log(req.body.name)
 
-        const student = await Student.findOne({ email })
-        if(student){
-            res.status(200).json({ message: "already" })
+    await Student.findOne({ email })
+    .then(student => {
+        if (student) {
+            res.status(200).json({ message: "already" });
         }
-        else{
-
+        
+         else {
             // Create a new Student object
             const newStudent = new Student({ name, email, phone, password, programme, department, year });
 
             // Save the new student to the database
-            await newStudent.save();
-
-            // Redirect to the login page upon successful signup
-            res.status(200).json({ message: "success" })
+            newStudent.save()
+                .then(() => {
+                    // Redirect to the login page upon successful signup
+                    res.status(200).json({ message: "success" });
+                })
+                .catch(error => {
+                    console.error('Error saving student:', error);
+                    res.status(500).json({ message: "error" });
+                });
         }
-    } catch (error) {
-        res.status(200).json({ message: "failed" })
-    }
+    })
+    .catch(error => {
+        console.error('Error finding student:', error);
+        res.status(500).json({ message: "error" });
+    });
 });
 
 router.get('/session_check', signup_loginController.session_check);
