@@ -5,6 +5,8 @@ function onLoad(event_name) {
     const title = events[event_name] ? events[event_name]["title"] : "Event Not Found";
     document.getElementById("event_title").innerHTML = title;
 
+
+
     const event_description = events[event_name] ? events[event_name]["description"] : "Description Not Found";
     document.getElementById("event_description").innerHTML = event_description;
 
@@ -47,15 +49,21 @@ function onLoad(event_name) {
     var rules = events[event_name] ? events[event_name]["event_rules"] : "Not found";
     document.getElementById("rules").innerHTML = rules
 
+    
     if(events[event_name]["title"] === "NETHUNT" || events[event_name]["title"] === "LAST STAND [Valorant]"){
         document.getElementById("r2").style.display = "none";
         document.getElementById("s2").style.display = "none";
     }
+    else if(events[event_name]["title"] === "CODESPRINT"){
+        document.getElementById("registerEve").innerHTML = "CLOSED";
+    }
+
     else{
         document.getElementById("r_2").style.display = "block";
         document.getElementById("s_2").style.display = "block";
     }
-
+    
+    
 }
 // function registerEvent(event_name) {
 //     if (!events[event_name]) {
@@ -223,9 +231,12 @@ function registerEvent(event_name) {
         alert("[Automatic Registration] Be the WINNERS of other Events!..")
         return;
     }
+    else if(events[event_name]["title"] === "CODESPRINT"){
+        alert("Registrations closed for CODESPRINT!")
+        return;
+    }
 
     var emailRegex = /^[0-9]{2}[a-zA-Z]{1,2}[0-9]+@psgtech\.ac\.in$/;
-    
 
     // Check user session
     fetch("/session_check")
