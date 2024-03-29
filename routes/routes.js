@@ -4,6 +4,7 @@ const eventController = require('../controllers/eventController');
 const signup_loginController = require('../controllers/signupLoginController');
 const registrationController = require('../controllers/registrationController');
 const Student = require('../models/student');
+const OTP = require('../models/otp')
 
 router.get('/', (req, res) => {
     res.render('index');
