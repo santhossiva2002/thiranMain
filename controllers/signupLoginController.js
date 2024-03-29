@@ -158,7 +158,6 @@ exports.logout = async (req, res) => {
 exports.getUser = (req, res) => {
     if (req.session.Student) {
         let temp = req.session.Student.email;
-        console.log("userEmail", temp);
         res.json({ "data": temp });
     } else {
         res.json({ "data": "No user in session" });
@@ -169,7 +168,6 @@ exports.getUserName = (req, res) => {
     console.log("hit")
     if (req.session.Student) {
         let temp = req.session.Student.name
-        console.log("userName", temp)
         res.json({ "data": temp })
     }
     else {
