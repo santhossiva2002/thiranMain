@@ -16,35 +16,46 @@ router.get('/login', signup_loginController.renderLogin);
 router.post('/login', signup_loginController.login);
 
 router.post('/signup', async (req, res) => {
-    const {name, email, phone, password, programme, department, year} = req.body;
-    // console.log(req.body.userOTP)
+    const {userOTP, name, email, phone, password, programme, department, year} = req.body;
+    
+    try{
+    const existingOTP = await OTP.findOne({ email });
 
-    await Student.findOne({ email })
-    .then(student => {
-        if (student) {
-            res.status(200).json({ message: "already" });
-        }
-        
-         else {
-            // Create a new Student object
-            const newStudent = new Student({ name, email, phone, password, programme, department, year });
+    if (existingOTP && existingOTP.otp === userOTP){
+        await Student.findOne({ email })
+        .then(student => {
+            if (student) {
+                res.status(200).json({ message: "already" });
+            }
+            
+            else {
+                // Create a new Student object
+                const newStudent = new Student({ name, email, phone, password, programme, department, year });
 
-            // Save the new student to the database
-            newStudent.save()
-                .then(() => {
-                    // Redirect to the login page upon successful signup
-                    res.status(200).json({ message: "success" });
-                })
-                .catch(error => {
-                    console.error('Error saving student:', error);
-                    res.status(500).json({ message: "error" });
-                });
-        }
-    })
-    .catch(error => {
-        console.error('Error finding student:', error);
-        res.status(500).json({ message: "error" });
-    });
+                // Save the new student to the database
+                newStudent.save()
+                    .then(() => {
+                        // Redirect to the login page upon successful signup
+                        res.status(200).json({ message: "success" });
+                    })
+                    .catch(error => {
+                        console.error('Error saving student:', error);
+                        res.status(500).json({ message: "error" });
+                    });
+            }
+        })
+        .catch(error => {
+            console.error('Error finding student:', error);
+            res.status(500).json({ message: "error" });
+        });
+    }
+    else{
+        res.status(200).json({message: "David Billa"});
+    }
+}
+catch(error){
+    res.status(500).json({message: "OTP not exists"});
+}
 });
 
 router.get('/session_check', signup_loginController.session_check);
