@@ -638,7 +638,7 @@ const events = {
         general_info: {
             no_participants: "2-4",
             no_rounds: 1,
-            venue: "ONLINE EVENT",
+            venue: "EVENT",
             duration_1: "09:00AM - 06:00PM on 30-03-2024",
             duration_2: "N/A"
         },
