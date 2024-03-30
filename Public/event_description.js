@@ -54,7 +54,7 @@ function onLoad(event_name) {
         document.getElementById("r2").style.display = "none";
         document.getElementById("s2").style.display = "none";
     }
-    else if(events[event_name]["title"] === "CODESPRINT" || events[event_name]["title"] === "TRIPLE TROUBLE"){
+    else if(events[event_name]["title"] === "CODESPRINT" || events[event_name]["title"] === "TRIPLE TROUBLE" || events[event_name]["title"] === "CRICKBID AUCTION"){
         document.getElementById("registerEve").innerHTML = "CLOSED";
     }
 
@@ -231,8 +231,8 @@ function registerEvent(event_name) {
         alert("[Automatic Registration] Be the WINNERS of other Events!..")
         return;
     }
-    else if(events[event_name]["title"] === "CODESPRINT" || events[event_name]["title"] === "TRIPLE TROUBLE"){
-        alert("Registrations closed for CODESPRINT!")
+    else if(events[event_name]["title"] === "CODESPRINT" || events[event_name]["title"] === "TRIPLE TROUBLE" || events[event_name]["title"] == "CRICKBID AUCTION"){
+        alert("Registrations closed for "+events[event_name]["title"]+"!")
         return;
     }
 
